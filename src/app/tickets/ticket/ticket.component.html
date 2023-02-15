@@ -2,7 +2,11 @@
   <!-- we use the {{ }} syntax to display the data, more info: https://angular.io/guide/displaying-data-->
   <h3>{{ticket.title}} Changements </h3> <!--il ajoute danas les deux listes -->
   <i class="fas fa-calendar-alt"></i> {{ticket.date | date: 'shortTime'}} &nbsp;&nbsp;
-  <i class="far fa-user"></i> {{ticket.student}}<br>
-  <i class="far fa-user"></i> {{ticket.major}}
+  <i class="far fa-user"></i> {{ticket.student}}
+  
+  <i *ngIf="ticket.major == 'SI'" class="fas fa-vials"></i> 
+  <i *ngIf="ticket.major == 'GE'" class="fas fa-bookmark"></i> 
+  
+  {{ticket.major}}
 
 </div>
