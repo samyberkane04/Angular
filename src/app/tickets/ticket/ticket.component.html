@@ -7,6 +7,7 @@
   <i *ngIf="ticket.major == 'SI'" class="fas fa-vials"></i> 
   <i *ngIf="ticket.major == 'GE'" class="fas fa-bookmark"></i> 
   {{ticket.major}}
-  <button>supprimer</button>
+
+  <button (click)="deleteTicket()" >supprimer</button>
 
 </div>

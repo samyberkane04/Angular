@@ -13,6 +13,7 @@ export class TicketListComponent implements OnInit {
 
   constructor(public ticketService: TicketService) {
     this.ticketService.tickets$.subscribe((tickets) => this.ticketList = tickets);
+    
   }
 
   ngOnInit() {
@@ -21,5 +22,9 @@ export class TicketListComponent implements OnInit {
   ticketHasBeenSelected(hasBeenSelected: boolean) {
     console.log('event received from child:', hasBeenSelected);
   }
+  deleteTicket(ticket: Ticket){
+    this.ticketService.deleteTicket(ticket);
+    console.log('event received from child2222222222:', ticket);
 
+  }
 }
