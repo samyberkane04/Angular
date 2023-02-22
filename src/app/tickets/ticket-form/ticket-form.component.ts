@@ -17,7 +17,7 @@ export class TicketFormComponent implements OnInit {
    * More information about Reactive Forms: https://angular.io/guide/reactive-forms
    */
   public ticketForm: FormGroup;
-
+  public Major: string[] = ['GE','SI','MI'];
   constructor(public formBuilder: FormBuilder, public ticketService: TicketService) {
     // Form creation
     this.ticketForm = this.formBuilder.group({

@@ -2,7 +2,9 @@ import { Ticket } from '../models/ticket';
 
 const dateToday: Date = new Date();
 
+
 export const TICKETS_MOCKED: Ticket[] = [
+  
   {
     title: 'Sl in Algeria',
     description: '',
